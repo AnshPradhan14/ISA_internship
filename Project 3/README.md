@@ -43,10 +43,7 @@ pip install -r requirements.txt
 
 ```
 .
-├── task_1.ipynb
-├── task_2.ipynb
-├── ...
-├── task_7.ipynb
+├── ISS_PYTHON_TRACKING_ISL (1).ipynb
 ├── iss_tracker_app.py   # Task 8: Streamlit app
 ├── requirements.txt
 └── README.md
