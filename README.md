@@ -5,8 +5,8 @@ This repository contains the Jupyter notebooks and associated files for two proj
 ## Projects Overview
 
 1.  **Dynamical Mass Calculation of a Galaxy Cluster**
-
 2.  **Measuring Cosmological Parameters Using Type Ia Supernovae**
+3.  **International Space Station Tracker**
 
 ## 1. Dynamical Mass Calculation of a Galaxy Cluster
 
@@ -48,18 +48,6 @@ This project focuses on calculating the dynamical mass of a galaxy cluster using
 
 * **Pandas:** A data manipulation and analysis library, particularly useful for handling tabular data.
 
-### How to Run
-
-1.  **Prerequisites:** Ensure you have Python installed, along with the following libraries:
-
-    ```bash
-    pip install numpy matplotlib pandas astropy
-
-    ```
-
-2.  **Data:** Download the `Skyserver_SQL6_17_2025 4_59_10 AM.csv` file (as instructed in the original PDF) and place it in the appropriate directory, or update the `file_path` variable in the notebook.
-
-3.  **Execute:** Open the `1_dynamical_mass.ipynb` notebook in a Jupyter environment (Jupyter Lab, Jupyter Notebook, VS Code with Jupyter extension) and run all cells sequentially.
 
 ## 2. Measuring Cosmological Parameters Using Type Ia Supernovae
 
@@ -101,37 +89,66 @@ This project delves into the realm of observational cosmology, using Type Ia Sup
 
 * **`scipy.integrate.quad`:** Used for numerical integration, essential for calculating cosmological distances.
 
-### How to Run
+## 3. Tracking the International Space Station (ISS)
 
-1.  **Prerequisites:** Ensure you have Python installed, along with the following libraries:
+This project focuses on building a comprehensive system to track the International Space Station (ISS) in real-time, predict its passes over specific locations, and analyze its orbital dynamics using Python. The core idea is to apply principles of orbital mechanics and geospatial data processing to understand and visualize satellite trajectories.
 
-    ```bash
-    pip install numpy pandas matplotlib scipy astropy
+### Objectives
 
-    ```
+* Import and utilize essential Python libraries for scientific computing, data analysis, and web application development (`numpy`, `matplotlib`, `pandas`, `astropy`, `skyfield`, `requests`, `pytz`, `folium`, `streamlit`).
 
-2.  **Data:** Download the `Pantheon+SH0ES.dat` file from the [Pantheon+ Data Release](https://github.com/PantheonPlusSH0ES/DataRelease/blob/main/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat) and place it in the same directory as the notebook.
+* Define and apply key astronomical and geographical concepts.
 
-3.  **Execute:** Open the `2_hubble_parameter.ipynb` notebook in a Jupyter environment and run all cells sequentially.
+* Load and preprocess live Two-Line Element (TLE) data for the ISS from external APIs.
 
-## Repository Structure
+* Implement robust error handling for network requests and data parsing.
 
-![image](https://github.com/user-attachments/assets/39fc8abb-cabd-4ccd-8dd6-f88c731340c6)
+* Automatically determine (via IP geolocation) or manually input observer location coordinates (latitude, longitude, elevation).
+
+* Calculate and display upcoming visibility windows (rise, culmination, set times, peak elevation, duration) for the ISS over a given location.
+
+* Visualize the real-time ground track of the ISS on an interactive world map.
+
+* Analyze historical TLE data to observe and interpret long-term trends in orbital elements (inclination, eccentricity, period).
+
+* Package all functionality into a user-friendly, real-time web dashboard using Streamlit.
+
+### Key Concepts Explored
+
+* **Two-Line Element (TLE) Data**: A standard data format used to encode orbital elements of Earth-orbiting satellites, crucial for predicting their positions.
+
+* **Orbital Mechanics**: The study of the motion of objects under the influence of gravity, specifically applied here to satellite trajectories.
+
+* **Geospatial Data**: Data related to positions on Earth's surface (latitude, longitude, elevation), used for defining observer locations and plotting ground tracks.
+
+* **Satellite Subpoint**: The geographical point on Earth directly beneath a satellite at any given moment.
+
+* **Pass Prediction**: Calculating the times when a satellite becomes visible (rises), reaches its highest point (culmination), and disappears (sets) from an observer's location.
+
+* **Orbital Elements**: Parameters that define the shape, size, and orientation of an orbit (e.g., inclination, eccentricity, orbital period).
+
+* **Orbital Decay & Reboosts**: Understanding how atmospheric drag causes satellites to lose altitude and how periodic engine burns (reboosts) are used to maintain orbit.
+
+* **Skyfield**: A powerful Python library for high-precision astronomy calculations, including satellite propagation.
+
+* **Streamlit**: A Python framework for rapidly building interactive web applications and dashboards with minimal web development knowledge.
 
 
 ## Internship Learnings
 
 These projects provided invaluable hands-on experience in:
 
-* **Astrophysical Data Analysis:** Working with real astronomical datasets and applying statistical methods to extract meaningful insights.
+* **Astrophysical and Satellite Data Analysis:** Working with real astronomical datasets (like galaxy cluster spectroscopic data) and **live satellite Two-Line Element (TLE) data**, applying statistical methods to extract meaningful insights and predict dynamic behaviors.
 
-* **Cosmological Modeling:** Understanding and implementing fundamental cosmological equations and models.
+* **Cosmological and Orbital Modeling:** Understanding and implementing fundamental cosmological equations and models, alongside **principles of orbital mechanics for Earth-orbiting satellites**.
 
-* **Python for Science:** Enhancing proficiency in Python's scientific ecosystem, including `numpy`, `pandas`, `matplotlib`, `scipy`, and `astropy`.
+* **Python for Scientific and Web Applications:** Enhancing proficiency in Python's scientific ecosystem, including `numpy`, `pandas`, `matplotlib`, `scipy`, and `astropy`, and gaining practical experience in **building real-time web dashboards with Streamlit**.
 
-* **Problem-Solving:** Developing systematic approaches to analyze complex scientific problems.
+* **Problem-Solving:** Developing systematic approaches to analyze complex scientific problems, including **debugging live API integrations and optimizing real-time data visualization**.
 
-* **Scientific Visualization:** Creating informative plots to communicate results effectively.
+* **Scientific Visualization:** Creating informative plots to communicate results effectively, ranging from **redshift distributions to real-time ground tracks on interactive maps**.
+
+* **Real-time System Development:** Gaining practical experience in designing and implementing applications that process and display constantly updating data, including **handling data caching and efficient UI updates for live dashboards**.
 
 ## Contact
 
